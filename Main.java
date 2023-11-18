@@ -6,21 +6,22 @@ public class Main {
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
         ArrayList<Integer> boxesLocation = new ArrayList<Integer>();
-        int value = 0;
-        while( value < 1){
-            int km1 = random.nextInt(7);
-            int km2 = random.nextInt(7);
-            int km3 = random.nextInt(7);
+        while(true){
+            int value = 0;
+            while( value < 1){
+                int km1 = random.nextInt(7);
+                int km2 = random.nextInt(7);
+                int km3 = random.nextInt(7);
 
-            if(km1!=km2 && km1 != km3 && km3 != km2){
-                boxesLocation.add(km1);
-                boxesLocation.add(km2);
-                boxesLocation.add(km3);
-                value++;
+                if(km1!=km2 && km1 != km3 && km3 != km2){
+                    boxesLocation.add(km1);
+                    boxesLocation.add(km2);
+                    boxesLocation.add(km3);
+                    value++;
+                }
+
+
             }
-
-            System.out.println(boxesLocation);
-
             int a = 0;
             while(a<5) {
                 int firstBox = scanner.nextInt();
@@ -43,12 +44,15 @@ public class Main {
                 a++;
 
             }
-
+            boxesLocation.clear();
 
 
         }
 
+
+
     }
+
     public static void successfulFinding(){
         System.out.println("You have successfully found all three boxes!");
         System.exit(0);
