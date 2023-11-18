@@ -33,7 +33,7 @@ public class Main {
                 }
             }
             if (rightNumbers == 3) {
-                System.out.println("You have successfully found all three boxes!");
+                successfulFinding();
             } else {
                 System.out.println("You entered " + rightNumbers + " location correctly.");
             }
@@ -42,6 +42,10 @@ public class Main {
 
         }
 
+    }
+    public static void successfulFinding(){
+        System.out.println("You have successfully found all three boxes!");
+        System.exit(0);
     }
 
     public static int check(int a, int b, int c, int d){
