@@ -29,4 +29,13 @@ public class Main {
         }
 
     }
+
+    public static int check(int a, int b, int c, int d){
+        int g = 0;
+        boolean checkAB = a == b || a == c || a == d;
+        if(checkAB){
+            g++;
+        }
+        return g;
+    }
 }
