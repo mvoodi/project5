@@ -21,6 +21,10 @@ public class Main {
 
             System.out.println(boxesLocation);
 
+            int firstBox = scanner.nextInt();
+            int secondBox = scanner.nextInt();
+            int thirdBox = scanner.nextInt();
+
 
         }
 
