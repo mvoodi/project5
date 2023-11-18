@@ -21,21 +21,27 @@ public class Main {
 
             System.out.println(boxesLocation);
 
-            int firstBox = scanner.nextInt();
-            int secondBox = scanner.nextInt();
-            int thirdBox = scanner.nextInt();
-            int rightNumbers = 0;
-            for (int i = 0; i < 3; i++) {
-                int al = 0;
-                al = check(boxesLocation.get(i), firstBox, secondBox, thirdBox);
-                if (al == 1) {
-                    rightNumbers++;
+            int a = 0;
+            while(a<5) {
+                int firstBox = scanner.nextInt();
+                int secondBox = scanner.nextInt();
+                int thirdBox = scanner.nextInt();
+
+                int rightNumbers = 0;
+                for (int i = 0; i < 3; i++) {
+                    int al = 0;
+                    al = check(boxesLocation.get(i), firstBox, secondBox, thirdBox);
+                    if (al == 1) {
+                        rightNumbers++;
+                    }
                 }
-            }
-            if (rightNumbers == 3) {
-                successfulFinding();
-            } else {
-                System.out.println("You entered " + rightNumbers + " location correctly.");
+                if (rightNumbers == 3) {
+                    successfulFinding();
+                } else {
+                    System.out.println("You entered " + rightNumbers + " location correctly.");
+                }
+                a++;
+
             }
 
 
