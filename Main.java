@@ -1,17 +1,28 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Random random = new Random();
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<Integer> boxesLocation = new ArrayList<Integer>();
+        int value = 0;
+        while( value < 1){
+            int km1 = random.nextInt(7);
+            int km2 = random.nextInt(7);
+            int km3 = random.nextInt(7);
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+            if(km1!=km2 && km1 != km3 && km3 != km2){
+                boxesLocation.add(km1);
+                boxesLocation.add(km2);
+                boxesLocation.add(km3);
+                value++;
+            }
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+            System.out.println(boxesLocation);
+
+
         }
+
     }
 }
