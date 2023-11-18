@@ -24,6 +24,20 @@ public class Main {
             int firstBox = scanner.nextInt();
             int secondBox = scanner.nextInt();
             int thirdBox = scanner.nextInt();
+            int rightNumbers = 0;
+            for (int i = 0; i < 3; i++) {
+                int al = 0;
+                al = check(boxesLocation.get(i), firstBox, secondBox, thirdBox);
+                if (al == 1) {
+                    rightNumbers++;
+                }
+            }
+            if (rightNumbers == 3) {
+                System.out.println("You have successfully found all three boxes!");
+            } else {
+                System.out.println("You entered " + rightNumbers + " location correctly.");
+            }
+
 
 
         }
