@@ -22,17 +22,15 @@ public class Main {
 
 
             }
-            int a = 0;
-            while(a<5) {
+            int attempts = 0;
+            while(attempts < 5) {
                 int firstBox = scanner.nextInt();
                 int secondBox = scanner.nextInt();
                 int thirdBox = scanner.nextInt();
 
                 int rightNumbers = 0;
                 for (int i = 0; i < 3; i++) {
-                    int al = 0;
-                    al = check(boxesLocation.get(i), firstBox, secondBox, thirdBox);
-                    if (al == 1) {
+                    if (check(boxesLocation.get(i), firstBox, secondBox, thirdBox) == 1) {
                         rightNumbers++;
                     }
                 }
@@ -41,7 +39,7 @@ public class Main {
                 } else {
                     System.out.println("You entered " + rightNumbers + " location correctly.");
                 }
-                a++;
+                attempts++;
 
             }
             boxesLocation.clear();
@@ -60,8 +58,8 @@ public class Main {
 
     public static int check(int a, int b, int c, int d){
         int g = 0;
-        boolean checkAB = a == b || a == c || a == d;
-        if(checkAB){
+        boolean checkABCD = a == b || a == c || a == d;
+        if(checkABCD){
             g++;
         }
         return g;
